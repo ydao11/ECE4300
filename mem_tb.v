@@ -22,12 +22,14 @@
 
 module mem_tb();
 
-        reg clk_tb = 1; 
+        reg clk_tb = 1;
+        reg reset_tb = 0;
         reg [31:0] addr_tb; 
         wire [31:0] data_tb; 
         
         mem MEM_TB (
-                    .clk(clk_tb), 
+                    .clk(clk_tb),
+                    .reset(reset_tb),
                     .addr(addr_tb), 
                     .data(data_tb)
                 );
