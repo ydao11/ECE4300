@@ -21,7 +21,8 @@
 
 
 module mem (
-            input clk, 
+            input clk,
+            input reset,
             input [31:0] addr, 
             output reg [31:0] data
         );
