@@ -22,6 +22,7 @@
 
 module if_id(
                 input clk,
+                input reset,
                 input [31:0] adder_in,
                 input [31:0] instr_in,
                 output reg [31:0] adder_out,
@@ -29,7 +30,10 @@ module if_id(
             );
             
      always @(posedge clk)
-        begin 
+        if (reset)
+           adder_out <= 32'd0;
+           instr_out <= 32'd0;
+        else begin 
             adder_out <= adder_in; 
             instr_out <= instr_in; 
         end
