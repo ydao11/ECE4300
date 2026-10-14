@@ -29,8 +29,10 @@ module mem (
         
         reg [31:0] instr_in [0:9];
         
-        initial 
-            begin 
+        initial
+            if(reset)
+                instruction <= 32'd0;
+            else begin 
                 instr_in[0] = 32'hA00000AA;
                 instr_in[1] = 32'h10000011;
                 instr_in[2] = 32'h20000022;
