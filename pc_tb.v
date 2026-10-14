@@ -23,11 +23,13 @@
 module pc_tb();
         
         reg clk_tb = 1; 
+        reg reset_tb = 0;
         reg [31:0] pc_in_tb;
         wire [31:0] pc_out_tb;
         
          pc PC_TB (
                     .clk(clk_tb),
+                    .reset(reset_tb),
                     .pc_in(pc_in_tb),
                     .pc_out(pc_out_tb)
                 );
