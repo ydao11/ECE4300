@@ -31,7 +31,7 @@ module mem (
         
         initial
             if(reset)
-                instruction <= 32'd0;
+                instr_in <= 32'd0;
             else begin 
                 instr_in[0] = 32'hA00000AA;
                 instr_in[1] = 32'h10000011;
