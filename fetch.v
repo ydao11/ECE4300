@@ -12,7 +12,6 @@ module fetch(
     wire [31:0] pc_out,
     pc_plus1,
     pc_mux,
-    next_pc,
     instr_data;
 
 mux m0( 
@@ -47,7 +46,7 @@ if_id if_idLatch0(
     .clk(clk),
     .reset(rst),
     .adder_in(pc_plus1),
-    .instr_in(pc_out),
+    .instr_in(instr_data),
     .adder_out(if_id_npc),
     .instr_out(if_id_instr)
 );
