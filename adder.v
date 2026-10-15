@@ -21,10 +21,16 @@
 
 
 module adder(
+                input clk,
+                input reset,
                 input [31:0] pcin,
                 output [31:0] pcout
             );
-            
-      assign pcout = pcin + 32'd1;       
-     
+  always @(posedge clk) begin
+    if(reset) begin
+      assign pcout = 32'd0
+    end else begin
+      assign pcout = pcin + 32'd1;
+    end
+  end
 endmodule
