@@ -21,9 +21,6 @@ module fetch_tb;
     always #1 clk_tb = ~clk_tb;
 
     initial begin
-        $dumpfile("fetch_tb.vcd");
-        $dumpvars(0, fetch_tb);
-
         rst_tb           = 1'b1;
         ex_mem_pc_src_tb = 1'b0;
         ex_mem_npc_tb    = 32'hFFFFFFFF;
