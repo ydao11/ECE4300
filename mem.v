@@ -30,9 +30,9 @@ module mem (
         reg [31:0] instr_in [0:9];
         
         initial begin
-            if(reset)
+            if(reset) begin
                 instr_in <= 32'd0;
-            else begin 
+            end else begin 
                 instr_in[0] = 32'hA00000AA;
                 instr_in[1] = 32'h10000011;
                 instr_in[2] = 32'h20000022;
@@ -47,12 +47,13 @@ module mem (
         end             
         
         always @(posedge clk) begin
-                if (reset)
+                if (reset) begin
                     data <= 32'd0;
-                else if (addr <= 32'd9)
+                end else if (addr <= 32'd9) begin
                     data <= instr_in[addr];
-                else
+                end else begin
                     data <= 32'd0;
+                end
             end
         
         
