@@ -29,13 +29,14 @@ module if_id(
                 output reg [31:0] instr_out
             );
             
-     always @(posedge clk)
-        if (reset)
+  always @(posedge clk) begin
+      if (reset) begin
            adder_out <= 32'd0;
            instr_out <= 32'd0;
-        else begin 
+      end else begin 
             adder_out <= adder_in; 
             instr_out <= instr_in; 
-        end
+      end
+  end
          
 endmodule
