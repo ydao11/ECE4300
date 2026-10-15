@@ -27,11 +27,12 @@ module pc(
             output reg [31:0] pc_out
         );
         
-    always @(posedge clk)
-        if(reset)
+always @(posedge clk) begin
+        if(reset) begin
             pc_out <= 32'd0;                
-        else begin 
+        end else begin 
             pc_out <= pc_in; 
-        end    
+        end
+      end
         
 endmodule
