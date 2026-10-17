@@ -24,7 +24,7 @@ module mem (
             input clk,
             input reset,
             input [31:0] addr, 
-            output reg [31:0] data
+            output reg [31:0] data = 32'd0
         );
         
         reg [31:0] instr_in [0:9];
