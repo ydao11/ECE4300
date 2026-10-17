@@ -81,9 +81,9 @@ The testbench source is available [*here*](fetch_tb.v).
 ├── README.md
 ├── Images/
 │ ├── Waveform1.png
-│ └── Waveform2.png
+│ ├── Waveform2.png
 │ ├── Waveform3.png
-│ └── Waveform4.png
+│ ├── Waveform4.png
 │ ├── Waveform5.png
 │ └── Waveform6.png
 ├── adder.v
