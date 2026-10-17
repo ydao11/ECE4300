@@ -24,12 +24,12 @@ Computer Architecture
 ### Timing or Behavioral Summary
 Save diagrams in the repository's `images/` folder. Use relative paths so they
 display on GitHub.
-![Timing Diagram](Images/[Waveform1].png)
-![Timing Diagram](Images/[Waveform2].png)
-![Timing Diagram](Images/[Waveform3].png)
-![Timing Diagram](Images/[Waveform4].png)
-![Timing Diagram](Images/[Waveform5].png)
-![Timing Diagram](Images/[Waveform6].png)
+![Timing Diagram](Images/Waveform1.png)
+![Timing Diagram](Images/Waveform2.png)
+![Timing Diagram](Images/Waveform3.png)
+![Timing Diagram](Images/Waveform4.png)
+![Timing Diagram](Images/Waveform5.png)
+![Timing Diagram](Images/Waveform6.png)
 
 ## Implementation
 ### Source Code
@@ -51,23 +51,21 @@ display on GitHub.
 
 ## Verification
 ### Verification Strategy
-The design is verified using **[simulation, formal checks, hardware testing, or
-another method]**.
+The design is verified using **simulation**.
 Verification covers:
-- [Normal operating case]
-- [Boundary or maximum-value case]
-- [Reset or initialization case]
-- [Invalid, stalled, or exceptional case, if applicable]
+- Normal operating case
+- Reset or initialization case
 ### Testbench and Waveform
 Save screenshots and waveform images in the repository's `images/` folder.
-![Testbench or waveform](images/[testbench-screenshot-filename].png)
-The testbench source is available [*here*](LINK_TO_TESTBENCH_CODE).
+![Testbench or waveform](Images/Waveform1.png)
+The testbench source is available [*here*](fetch_tb.v).
 ### Results
 | Test Case | Expected Result | Observed Result | Status |
 |---|---|---|---|
-| TC-01 — [Name] | [Expected behavior] | [Observed behavior] | Pass / Fail |
-| TC-02 — [Name] | [Expected behavior] | [Observed behavior] | Pass / Fail |
-| TC-03 — [Name] | [Expected behavior] | [Observed behavior] | Pass / Fail |
+| TC-01 — Reset Active | PC, Latch, and Instr. Mem should all be 0 with Reset at 1 | Behaved as expected | Pass |
+| TC-02 — PC Incrementing | PC incrementing by 1 as fetch increments through memory only on rising edge  | Behaved as expected | Pass |
+| TC-03 — PCSrc = 1, PC redirected to NPC = 0 | Mux selects EX_MEM_NPC and PC repeatedly loads 0 | Behaved as expected | Pass |
+| TC-04 — PCSrc = 0 | Mux selects PC + 1 again and PC begins incrementing | Behaves as expected | Pass |
 
 ## Reproduction Instructions
 ### Tools and Versions
