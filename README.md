@@ -100,6 +100,3 @@ The testbench source is available [*here*](fetch_tb.v).
 ├── pc_tb.v
 └── 
 ```
-## Known Issues and Future Improvements
-- [Document any known issue, unverified behavior, or technical debt.]
-- [Describe a realistic improvement or extension.]
