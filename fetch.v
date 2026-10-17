@@ -30,14 +30,14 @@ pc pc0(
 
 adder add0( 
     .clk(clk),
-    .rst(rst),
+    .reset(rst),
     .pcin(pc_out),
     .pcout(pc_plus1)
 );
 
 mem inMem0( 
     .clk(clk),
-    .rst(rst),
+    .reset(rst),
     .addr(pc_out),
     .data(instr_data)
 );
