@@ -31,7 +31,7 @@ module mem (
         
         initial begin
             if(reset) begin
-                instr_in <= 32'd0;
+                data <= 32'd0;
             end else begin 
                 instr_in[0] = 32'hA00000AA;
                 instr_in[1] = 32'h10000011;
